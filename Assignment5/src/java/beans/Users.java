@@ -14,8 +14,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
 /**
- *
- * @author Len Payne <len.payne@lambtoncollege.ca>
+ * SORRY MARK IS A NOOB
+ * @author c0121833
  */
 @Named
 @ApplicationScoped
