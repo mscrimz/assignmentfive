@@ -13,11 +13,13 @@ import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
+
+
 /**
  *
  * @author c0121833
  */
-@Named(value = "posts")
+@Named(value ="posts")
 @ApplicationScoped
 public class Posts {
 

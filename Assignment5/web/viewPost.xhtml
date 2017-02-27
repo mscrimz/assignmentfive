@@ -10,16 +10,18 @@
         <h1>#{posts.currentPost.title}</h1>
         <p>By #{users.getUsernameById(posts.currentPost.userId)} at
             #{posts.currentPost.createdTime.toLocaleString()}</p>
-            <p>#{posts.currentPost.contents}</p>
-            <h:form>
-                <c:if test="#{login.loggedIn}">
-                    <h:commandButton value="Edit" action="#{posts.editPost()}"/>
-                </c:if>
-                <c:if test="#{!login.loggedIn}">
-                    <h:button value="Login" outcome="login"/>
-                </c:if>
-                <h:button value="Return" outcome="index"/>
-            </h:form>
+        <p>#{posts.currentPost.contents}</p>
+        <h:form>
+            <c:if test="#{login.loggedIn}">
+
+                <h:commandButton value="Edit" action="#{posts.editPost()}"/>
+            </c:if>
+            <c:if test="#{!login.loggedIn}">
+                <h1>Must Be logged in!</h1>
+                <h:button value="Login" outcome="login"/>
+            </c:if>
+            <h:button value="Return" outcome="index" />
+        </h:form>
     </h:body>
 </html>
 
