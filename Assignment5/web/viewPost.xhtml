@@ -8,7 +8,7 @@
     </h:head>
     <h:body>
         <h1>#{posts.currentPost.title}</h1>
-        <p>By #{users.getUsernameById(posts.currentPost.user_id)} at
+        <p>By #{users.getUsernameById(posts.currentPost.userId)} at
             #{posts.currentPost.createdTime.toLocaleString()}</p>
             <p>#{posts.currentPost.contents}</p>
             <h:form>

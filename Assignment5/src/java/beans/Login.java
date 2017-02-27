@@ -57,6 +57,7 @@ private User currentUser;
     String passhash = DBUtils.hash(password);
     
     for (User u : Users.getInstance().getUsers()) {
+        System.out.println(u.getPasshash() + " " + passhash);
         if(username.equals(u.getUsername()) 
          && passhash.equals(u.getPasshash())) {
         loggedIn = true;

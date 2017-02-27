@@ -22,14 +22,13 @@ import javax.inject.Named;
 public class Users {
 
     private List<User> users;
-    private static Users instance;
+    private static Users instance = new Users();
 
     /**
      * No-arg constructor -- retrieves List from DB and sets up singleton
      */
     public Users() {
         getUsersFromDB();
-        instance = this;
     }
 
     /**

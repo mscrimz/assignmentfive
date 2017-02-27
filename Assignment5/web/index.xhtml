@@ -15,7 +15,7 @@
                     </h:commandLink>
                 </h:column>
                 <h:column>
-                    #{users.getUsernameById(post.user_id)}
+                    #{users.getUsernameById(post.userId)}
                 </h:column>
                 <h:column>
                     #{post.createdTime.toLocaleString()}
@@ -25,7 +25,7 @@
                 <h:commandButton value="Add New" action="#{posts.addPost()}"/>
             </c:if>
             <c:if test="#{!login.loggedIn}">
-                <h:button value="Login" outcome="login"/>
+                <h:button value="Login" outcome="loginPage"/>
             </c:if>
         </h:form>
     </h:body>
