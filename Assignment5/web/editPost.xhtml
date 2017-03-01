@@ -12,6 +12,7 @@
                 <p>Title: <h:inputText value="#{posts.currentPost.title}"/></p>
                 <p><h:inputTextarea value="#{posts.currentPost.contents}"/></p>
                 <h:commandButton value="Save" action="#{posts.savePost(login.currentUser)}"/>
+                <h:commandButton action="#{posts.deletePost(login.currentUser)}" value="Delete" />
             </c:if>   
             <c:if test="#{!login.loggedIn}">
                 <h1>Log your ass in if you wanna edit anything!</h1>

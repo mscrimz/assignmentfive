@@ -127,4 +127,22 @@ public class Posts {
         currentPost = getPostByTitle(currentPost.getTitle());
         return "viewPost";
     }
+    
+
+    public String deletePost(User user) {
+        try {
+            Connection conn = DBUtils.getConnection();
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate("DELETE FROM posts WHERE id = " + currentPost.getId());
+            getPostsFromDB();
+            return "index";
+        } catch (SQLException ex) {
+            Logger.getLogger(Posts.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return "index";
+    }    
+    
+    public String cancel() {
+        return "index";
+    }
 }
